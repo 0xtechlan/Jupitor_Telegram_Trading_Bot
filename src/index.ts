@@ -47,9 +47,29 @@ bot.onText(/\/start/, async (msg) => {
 
 // help command
 bot.onText(/\/help/, async (msg) => {
-   const userId = msg.from!.id;
-  bot.sendMessage(userId, "Welcom to help center. If you have any questions, please contact via @soldev2311");
+  const userId = msg.from!.id;
+  const helpMessage = `
+🤖 *Solana Trading Bot Help Center*
+
+Here are the commands you can use:
+
+/start – Start the bot and set a token
+/help – Show this help message
+📊 *Check Balance* – View your SOL and token balance
+💰 *Buy Token* – Swap SOL for your selected token
+💸 *Sell Token* – Sell a percentage of your token back to SOL
+➕ *Add New Token* – Set or change the token address
+
+If you need support, feel free to contact [@soldev2311](https://t.me/soldev2311)
+
+🔒 *Note:* Your wallet operates locally and is never shared.
+
+Enjoy trading on Solana 🚀
+  `.trim();
+
+  await bot.sendMessage(userId, helpMessage, { parse_mode: "Markdown" });
 });
+
 // Handle text messages (wallet setup, buy, and sell)
 bot.on("message", async (msg) => {
   const userId = msg.from!.id;
