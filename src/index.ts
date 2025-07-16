@@ -45,6 +45,11 @@ bot.onText(/\/start/, async (msg) => {
   bot.sendMessage(userId, "Welcome! Set token address:");
 });
 
+// help command
+bot.onText(/\/help/, async (msg) => {
+   const userId = msg.from!.id;
+  bot.sendMessage(userId, "Welcom to help center. If you have any questions, please contact via @soldev2311");
+});
 // Handle text messages (wallet setup, buy, and sell)
 bot.on("message", async (msg) => {
   const userId = msg.from!.id;
