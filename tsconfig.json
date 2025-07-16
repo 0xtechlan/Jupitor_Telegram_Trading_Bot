@@ -1,0 +1,26 @@
+// {
+//   "compilerOptions": {
+//     "target": "ES2020",
+//     "module": "commonjs",
+//     "outDir": "./dist",
+//     "rootDir": "./src",
+//     "strict": true,
+//     "esModuleInterop": true,
+//     "skipLibCheck": true,
+//     "forceConsistentCasingInFileNames": true
+//   }
+// }
+
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "outDir": "./dist"
+  }
+}
